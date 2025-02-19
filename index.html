@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Chart.js for progress graph -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Exercise Tracker</h1>
+        
+        <div class="muscle-group-buttons">
+            <button class="muscle-btn mb-1" data-group="chest">
+                <img src="img/chest.png" alt="Chest" class="muscle-icon">
+                Chest
+            </button>
+            <button class="muscle-btn mb-2" data-group="back">
+                <img src="img/back.png" alt="Back" class="muscle-icon">
+                Back
+            </button>
+            <button class="muscle-btn mb-3" data-group="lower-body">
+                <img src="img/legs.png" alt="Lower Body" class="muscle-icon">
+                Lower Body
+            </button>
+            <button class="muscle-btn mb-4" data-group="arms">
+                <img src="img/arms.png" alt="Arms" class="muscle-icon">
+                Arms
+            </button>
+        </div>
+
+        <form id="exercise-form">
+            <input type="text" id="exercise-name" placeholder="Exercise Name" required>
+            <div><input type="number" id="exercise-sets" placeholder="Sets" required>
+            <input type="number" id="exercise-reps" placeholder="Reps" required>
+            <input type="number" id="exercise-weight" placeholder="Weight (kg)" required></div>
+            
+            <!-- <select id="exercise-muscle-group" required>
+                <option value="" disabled selected>Select Muscle Group</option>
+                <option value="chest">Chest</option>
+                <option value="back">Back</option>
+                <option value="lower-body">Lower Body</option>
+                <option value="arms">Arms</option>
+            </select> -->
+            <button type="submit">Add Exercise</button>
+        </form>
+
+        <ul id="exercise-list"></ul>
+    </div>
+
+    <!-- Edit Modal -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Edit Weight & Progress</h3>
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+            </div>
+            <input type="number" id="new-weight" placeholder="New Weight (kg)">
+            <button onclick="saveNewWeight()">Save Weight</button>
+            <canvas id="progressChart"></canvas>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
