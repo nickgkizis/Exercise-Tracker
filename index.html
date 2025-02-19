@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercise Tracker</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Chart.js for progress graph -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
 </head>
 <body>
     <div class="container">
@@ -23,7 +25,7 @@
             </button>
             <button class="muscle-btn mb-3" data-group="lower-body">
                 <img src="img/legs.png" alt="Lower Body" class="muscle-icon">
-                Lower Body
+                Legs
             </button>
             <button class="muscle-btn mb-4" data-group="arms">
                 <img src="img/arms.png" alt="Arms" class="muscle-icon">
@@ -33,17 +35,25 @@
 
         <form id="exercise-form">
             <input type="text" id="exercise-name" placeholder="Exercise Name" required>
-            <div><input type="number" id="exercise-sets" placeholder="Sets" required>
-            <input type="number" id="exercise-reps" placeholder="Reps" required>
-            <input type="number" id="exercise-weight" placeholder="Weight (kg)" required></div>
             
-            <!-- <select id="exercise-muscle-group" required>
-                <option value="" disabled selected>Select Muscle Group</option>
-                <option value="chest">Chest</option>
-                <option value="back">Back</option>
-                <option value="lower-body">Lower Body</option>
-                <option value="arms">Arms</option>
-            </select> -->
+        <div class="inpt">
+            <div class="input-group">
+                <input type="number" id="exercise-sets" placeholder="Sets" required>
+                <i class="fas fa-list"></i>
+            </div>
+            
+            <div class="input-group">
+                <input type="number" id="exercise-reps" placeholder="Reps" required>
+                <i class="fas fa-repeat"></i>
+            </div>
+            
+            <div class="input-group">
+                <input type="number" id="exercise-weight" placeholder="Weight (kg)" required>
+                <i class="fas fa-dumbbell"></i>
+            </div>
+        </div>
+            
+
             <button type="submit">Add Exercise</button>
         </form>
 

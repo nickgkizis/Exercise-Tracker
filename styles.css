@@ -1,12 +1,12 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #513e3e;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 120vh;
+    height: 100vh;
 }
 
 .container {
@@ -14,7 +14,7 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 500px;
+    width: auto;
 }
 
 h1 {
@@ -38,6 +38,7 @@ h1 {
     color: #c82333;
     font-size: 1.3rem;
     font-weight: bold;
+    border: 2px solid;
 }
 
 .muscle-btn img {
@@ -72,11 +73,11 @@ button {
 }
 
 button:hover {
-    border: 2px solid #00811e;
+    border: 2px solid rgb(232, 198, 198);
 }
 
 button.selected{
-    background-color: #7fff8e;
+    background-color: rgb(141, 232, 116);
 }
 
 ul {
@@ -102,12 +103,20 @@ li.chest {
     color: #e3fb44;
 }
 
+.mb-1.selected{
+    border:2px solid #e3fb44;
+}
+
 li.back {
     background-color: #ff35c6;
 }
 
 .mb-2{
     color: #ff35c6;
+}
+
+.mb-2.selected{
+    border:2px solid #ff35c6;
 }
 
 li.lower-body {
@@ -118,12 +127,20 @@ li.lower-body {
     color: #3e3eff;
 }
 
+.mb-3.selected{
+    border:2px solid #3e3eff;
+}
+
 li.arms {
     background-color: #f7b24b;
 }
 
 .mb-4{
     color: #f7b24b;
+}
+
+.mb-4.selected{
+    border:2px solid #f7b24b;
 }
 
 li button {
@@ -179,4 +196,43 @@ li button:hover {
 #progressChart {
     margin-top: 20px;
     max-height: 300px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+.input-group input {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 8px;
+}
+
+.input-group i {
+    color: #888;
+    padding: 0 10px;
+}
+
+.inpt{
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 500px) {
+    body {
+        flex-direction: column;
+        height: 100vh;
+    }
+    .inpt{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
 }
